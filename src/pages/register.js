@@ -24,7 +24,7 @@ export default function Register() {
         event.preventDefault();
         console.log(userRegisterData);
         try {
-            const respRegister = await axios.post('http://localhost:4000/medLife/v1/ur',userRegisterData);
+            const respRegister = await axios.post('https://disease-prediction-backend.vercel.app/medLife/v1/ur',userRegisterData);
             if(respRegister.data){
                 toast.success(respRegister.data.message);
             }
